@@ -1,0 +1,178 @@
+:root {
+  --dark-gray: #292929;
+  --background-shadow: rgba(0, 0, 0, 0.6);
+  --navy: #3c486b;
+  --navy1: #505a7a;
+  --red: #f45050;
+  --red1: #f67373;
+  --yellow: #f9d949;
+  --white: #eaeaea;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.625rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --container-width: 120rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  max-width: var(--container-width);
+}
+
+.heading-container {
+  background-color: var(--background-shadow);
+  color: var(--white);
+  padding: 2rem;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-image {
+  width: 40vw;
+  height: 100vh;
+  background-image: url('./women-boxer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container-2 {
+  width: 60vw;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.site-description {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.125rem;
+}
+
+.form-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.input-box {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  width: 40%;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: var(--white);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button {
+  background-color: var(--white);
+  color: black;
+  border: 2px solid var(--navy1);
+}
+
+.button:hover {
+  background-color: var(--navy1);
+  color: var(--white);
+}
+
+.log-in {
+  color: var(--white);
+}
+
+@media (max-width: 45rem) {
+  .heading-container {
+    padding: 1rem;
+  }
+
+  .hero-image {
+    width: 50vw;
+  }
+
+  .container-2 {
+    padding: 1rem;
+    width: 50vw;
+  }
+
+  .site-description {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .main {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .container-2 {
+    width: 100%;
+  }
+
+  .site-description {
+    margin-top: var(--spacing-lg);
+    font-size: 1.125rem;
+  }
+
+  .form-container {
+    justify-content: center;
+  }
+
+  .log-in {
+    margin-bottom: var(--spacing-lg);
+  }
+}
